@@ -2,16 +2,12 @@
 <header>
         <nav>
             <h3><?php 
-            if ((isset( $_SESSION["login"])) && (!empty( $_SESSION["login"]))){
+            if ((isset( $_SESSION['login'])) && (!empty( $_SESSION['login']))){
 
-                 echo "Utilisateur" . $_SESSION["login"] ." "; 
+                 echo "Utilisateur: " .$_SESSION['login'].""; 
             } else {
                  echo "Utilisateur non reconnu.";
             }
-            
-           
-            
-            
             
             ?> </h3>
             <a href="index.php">Accueil</a>

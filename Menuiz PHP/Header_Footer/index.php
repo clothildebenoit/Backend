@@ -44,6 +44,7 @@
    // On affiche chaque produit un à un
    foreach ($produits as $produit) {
    ?>
+   
            <article class="_folderHotline">
                 <?php echo $produit['PRD_DESCRIPTION'];
            echo '<img src='. $produit['PRD_PICTURE'].'>';
