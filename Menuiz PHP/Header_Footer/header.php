@@ -5,7 +5,8 @@
             if ((isset( $_SESSION['login'])) && (!empty( $_SESSION['login']))){
 
                  echo "Utilisateur: " .$_SESSION['login'].""; 
-            } else {
+            }
+           else {
                  echo "Utilisateur non reconnu.";
             }
             

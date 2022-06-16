@@ -51,6 +51,7 @@ nav {
 /* ESPACE MAIN */
 main {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0;
     width: 99%;
 }
@@ -337,6 +338,14 @@ img {
 hr {
     border: #5292e6cb 1px solid;
 }
+.button{
+    border: #5292e6cb 3px ridge;
+    text-align: center;
+    border-radius: 1%;
+    -webkit-box-shadow: 1px 0px 25px 5px rgba(0, 0, 0, 0.61);
+    box-shadow: 1px 0px 25px 5px rgba(0, 0, 0, 0.61);
+    padding: 1.5%;
+}
 
 /* AFFICHAGE DOSSIER */
 #affichage {
@@ -392,14 +401,13 @@ footer {
 
 .tech-container {
     display: flex;
-
     justify-content: center;
 }
 
 .fold-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+    display: block;
+    width: 60%;
+
 }
 
 .half-box {
@@ -480,7 +488,7 @@ footer {
 }
 
 .form-admin {
-    padding: 10%;
+    padding: 5%;
 }
 
 .field-form {
