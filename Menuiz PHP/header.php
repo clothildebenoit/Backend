@@ -6,9 +6,7 @@
 
                  echo "Utilisateur: " .$_SESSION['login'].""; 
             }
-           else {
-                 echo "Utilisateur non reconnu.";
-            }
+           
             
             ?> </h3>
             <a href="index.php">Accueil</a>

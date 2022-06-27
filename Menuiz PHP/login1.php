@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+include "header.php";
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -10,16 +11,16 @@ try {
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if (isset($_POST["login"])) {
         if (empty($_POST["username"]) || empty($_POST["password"])) {
-            $message = '<label>All fields are required</label>';
+            $message = '<label>Email et mot de passe non reconnu</label>';
         } else {
             $query = "SELECT * FROM t_d_user_usr WHERE  USR_MAIL = :username AND USR_PASSWORD = sha1(:password)";
             $statement = $connect->prepare($query);
             $statement->execute(
                 array(
-                    'username'     =>     $_POST["username"],
-                    'password'     =>     $_POST["password"],
-                    // 'USR_FIRSTNAME'    =>     $_POST["firstname"],
-                    // 'USR_LASTNAME'    =>     $_POST["lastname"]
+                    // 'username'     =>     $_POST["username"],
+                    // 'password'     =>     $_POST["password"],
+                    'USR_FIRSTNAME'    =>     $_POST["firstname"],
+                    'USR_LASTNAME'    =>     $_POST["lastname"]
                 )
             );
             $users = $statement->fetchAll();
@@ -61,12 +62,12 @@ try {
             echo '<label class="text-danger">' . $message . '</label>';
         }
         ?>
-        <h3 align="">Hello </h3><br />
+        <h3 align="">Veuilez vous identifier. </h3><br />
         <form method="post">
             <label>Email</label>
             <input type="text" name="username" class="form-control" />
             <br />
-            <label>Password</label>
+            <label>mot de pass</label>
             <input type="password" name="password" class="form-control" />
             <br />
             <input type="submit" name="login" class="btn btn-info" value="Login" />
