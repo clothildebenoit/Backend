@@ -22,12 +22,12 @@
         }
 
         .inscrip_form .form-group,
-        .inscrip_form .form-btn-group .search_form {
+        .inscrip_form .form-btn-group {
             width: 50%;
             margin: 0 auto
         }
 
-        .inscrip_form .form-btn-group .search_form{
+        .inscrip_form .form-btn-group {
             margin-top: 20px
         }
 
@@ -39,13 +39,13 @@
             width: 99%;
         }
 
-        .inscrip_form .btn-primary .search_form{
+        .inscrip_form .btn-primary {
             color: #fff;
             background-color: #343a40;
             border-color: #343a40;
         }
 
-        .inscrip_form .search_form .btn-primary:hover {
+        .inscrip_form .btn-primary:hover {
             background-color: #6c757d;
         }
 

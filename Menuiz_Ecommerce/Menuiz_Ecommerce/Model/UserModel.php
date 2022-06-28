@@ -57,7 +57,7 @@ on USR.UTY_ID=UTY.UTY_ID
             :email,
             :mdp,
             :nom,
-            :prenom  ,5 
+            :prenom  ,1 
         )'; //par défaut on le met en type utilisateur visiteur
 
         $stmt = $this->idc->prepare($query);
