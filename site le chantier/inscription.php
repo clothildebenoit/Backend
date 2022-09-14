@@ -1,4 +1,4 @@
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\init.inc.php");
+<?php require_once(".\inc\init.inc.php");
 
 if($_POST)
 {
@@ -22,14 +22,14 @@ if($_POST)
             {
                 $_POST[$indice] = htmlEntities(addSlashes($valeur));
             }
-            executeRequete("INSERT INTO membre (pseudo, mdp, nom, prenom, email, civilite, ville, code_postal, adresse) VALUES ('$_POST[pseudo]', '$_POST[mdp]', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]', '$_POST[civilite]', '$_POST[ville]', '$_POST[code_postal]', '$_POST[adresse]')");
+            executeRequete("INSERT INTO membre (pseudo, mdp, nom, prenom, email) VALUES ('$_POST[pseudo]', '$_POST[mdp]', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]')");
             $contenu .= "<div class='validation'>Vous êtes inscrit à notre site web. <a href=\"connexion.php\"><u>Cliquez ici pour vous connecter</u></a></div>";
         }
     }
 }
 ?>
 
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\haut.inc.php"); ?>
+<?php require_once(".\inc\haut.inc.php"); ?>
 <?php echo $contenu; ?>
  
 <form method="post" action="">
@@ -47,21 +47,9 @@ if($_POST)
   
     <label for="email">Email</label><br>
     <input type="email" id="email" name="email" placeholder="exemple@gmail.com"><br><br>
-          
-    <label for="civilite">Civilité</label><br>
-    <input name="civilite" value="m" checked="" type="radio">Homme
-    <input name="civilite" value="f" type="radio">Femme<br><br>
-                  
-    <label for="ville">Ville</label><br>
-    <input type="text" id="ville" name="ville" placeholder="votre ville" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés : a-zA-Z0-9-_."><br><br>
-          
-    <label for="cp">Code Postal</label><br>
-    <input type="text" id="code_postal" name="code_postal" placeholder="code postal" pattern="[0-9]{5}" title="5 chiffres requis : 0-9"><br><br>
-          
-    <label for="adresse">Adresse</label><br>
-    <textarea id="adresse" name="adresse" placeholder="votre dresse" pattern="[a-zA-Z0-9-_.]{5,15}" title="caractères acceptés :  a-zA-Z0-9-_."></textarea><br><br>
+
  
     <input type="submit" name="inscription" value="S'inscrire">
 </form>
  
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\bas.inc.php"); ?>
+<?php require_once(".\inc\bas.inc.php"); ?>

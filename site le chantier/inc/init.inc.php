@@ -12,7 +12,7 @@ if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative d
 session_start();
  
 //--------- ROUTE/CHEMIN absolu
-define("RACINE_SITE","/site le chantier/");
+define("RACINE_SITE","site le chantier");
  
 //--------- VARIABLES
 $contenu = '';

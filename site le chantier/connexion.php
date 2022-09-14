@@ -1,4 +1,13 @@
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\init.inc.php"); 
+<?php require_once(".\inc\init.inc.php"); 
+
+if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
+{
+    session_destroy();
+}
+if(internauteEstConnecte())
+{
+    header("location:profil.php");
+}
 
 if($_POST)
 {
@@ -32,7 +41,7 @@ if($_POST)
 }
 ?>
 
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\haut.inc.php"); ?>
+<?php require_once(".\inc\haut.inc.php"); ?>
 <?php echo $contenu; ?>
  
 <form method="post" action="">
@@ -45,4 +54,4 @@ if($_POST)
      <input type="submit" value="Se connecter">
 </form>
  
-<?php require_once("C:\Users\cloth\Documents\git\DWWM\site le chantier\inc\bas.inc.php"); ?>
+<?php require_once(".\inc\bas.inc.php"); ?>
