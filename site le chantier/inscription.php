@@ -22,7 +22,7 @@ if($_POST)
             {
                 $_POST[$indice] = htmlEntities(addSlashes($valeur));
             }
-            executeRequete("INSERT INTO membre (pseudo, mdp, nom, prenom, email) VALUES ('$_POST[pseudo]', '$_POST[mdp]', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]')");
+            executeRequete("INSERT INTO membre (pseudo, mdp, nom, prenom, email) VALUES ('$_POST[pseudo]', '".hash('sha256', $_POST['mdp'])."', '$_POST[nom]', '$_POST[prenom]', '$_POST[email]')");
             $contenu .= "<div class='validation'>Vous êtes inscrit à notre site web. <a href=\"connexion.php\"><u>Cliquez ici pour vous connecter</u></a></div>";
         }
     }
@@ -50,6 +50,11 @@ if($_POST)
 
  
     <input type="submit" name="inscription" value="S'inscrire">
+
+    <label class="box-register">Déjà inscrit? 
+    <a href=".\connexion.php">Connectez-vous ici</a>
+    </label>
+
 </form>
  
 <?php require_once(".\inc\bas.inc.php"); ?>

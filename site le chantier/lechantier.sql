@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 09 sep. 2022 à 21:51
+-- Généré le : ven. 16 sep. 2022 à 13:02
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -63,14 +63,21 @@ DROP TABLE IF EXISTS `membre`;
 CREATE TABLE IF NOT EXISTS `membre` (
   `id_membre` int(3) NOT NULL AUTO_INCREMENT,
   `pseudo` varchar(20) NOT NULL,
-  `mdp` varchar(32) NOT NULL,
+  `mdp` varchar(100) DEFAULT NULL,
   `nom` varchar(20) NOT NULL,
   `prenom` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `statut` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_membre`),
   UNIQUE KEY `pseudo` (`pseudo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `membre`
+--
+
+INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `statut`) VALUES
+(1, 'clo', 'clo', 'Benoit', 'Clothilde', 'coty@gmx.fr', 0);
 
 -- --------------------------------------------------------
 

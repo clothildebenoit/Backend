@@ -1,20 +1,54 @@
 *{ margin: 0; }
 a{ text-decoration: none; color: #000; }
-.conteneur{ margin: 0 auto }
+.conteneur{ margin: 0 auto;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+ }
+ 
+label {
+    font-family: "Arial Black", Gadget, sans-serif;
+font-size: 16px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
 
 /* header*/
-header { background: #000000; padding: 5px; text-align: center; }
-header  span{ color: #fff; font-weight: bold; text-transform: uppercase; margin-right: 5%; }
+header { background: #fbf302; padding: 5px; text-align: center; }
+header  span{ color: #fff; font-weight: bold; 
+    text-transform: uppercase; margin-right: 5%; }
 header  nav{ display: inline; }
 header  a{ color: #ffffff; text-decoration: none; padding: 5px; }
-header  nav  a:hover{ background: #04baf6; }
+header  nav  a:hover{ background: #fbf302; }
 
 /* milieu*/
-section{ padding: 30px; min-height: 800px; }
+section{ padding: 30px; min-height: 800px;}
 
 /* footer*/
-footer{ background: #000; color: white; text-align: center; padding: 7px 0;}
+footer{ background: #fbf302; color: transparent; 
+    text-align: center; padding: 7px 0;}
 
 /* page entiere*/
 .erreur{ background: #ff0000; padding: 5px; margin: 5px; }
 .validation{ background: #669933; padding: 5px; margin: 5px; }
+
+/* formulaires*/
+form {
+    background: #fbf302; color: transparent; 
+    text-align: center; padding: 12px; margin: 20%;
+    border-radius: 35px;
+    border: #c7641e 3px solid;
+}
