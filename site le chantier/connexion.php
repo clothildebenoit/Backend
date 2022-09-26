@@ -44,13 +44,31 @@ if($_POST)
 <?php require_once(".\inc\haut.inc.php"); ?>
 <?php echo $contenu; ?>
  
+<!-- Formulaire de connection -->
 <form method="post" action="">
     <label for="pseudo">Pseudo</label><br>
     <input type="text" id="pseudo" name="pseudo"><br> <br>
          
-    <label for="mdp">Mot de passe</label><br>
-    <input type="text" id="mdp" name="mdp"><br><br>
- 
+    <label for="mdp">Mot de passe<br>
+    <input type="password" id="mdp" name="mdp" value=""><br>
+
+    <input type="checkbox" onclick="Afficher()"> Afficher le mot de passe</label>
+
+
+    <script>
+        function Afficher(){ 
+        var input = document.getElementById("mdp"); 
+if (input.type === "password")
+{ 
+input.type = "text"; 
+} 
+else{ 
+input.type = "password"; 
+} 
+}
+    </script>
+
+<br><br>
      <input type="submit" value="Se connecter">
 </form>
  
