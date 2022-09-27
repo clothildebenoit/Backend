@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 16 sep. 2022 à 13:02
+-- Généré le : mar. 27 sep. 2022 à 22:28
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -35,6 +35,20 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `date_enregistrement` datetime NOT NULL,
   `etat` enum('en cours de traitement','envoyé','livré') NOT NULL,
   PRIMARY KEY (`id_commande`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire`
+--
+
+DROP TABLE IF EXISTS `commentaire`;
+CREATE TABLE IF NOT EXISTS `commentaire` (
+  `id_commentaire` int(3) NOT NULL AUTO_INCREMENT,
+  `message` text NOT NULL,
+  `date_enregistrement` datetime NOT NULL,
+  PRIMARY KEY (`id_commentaire`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

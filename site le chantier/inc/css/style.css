@@ -1,5 +1,6 @@
 *{ margin: 0; }
 a{ text-decoration: none; color: #000; }
+
 .conteneur{ margin: 0 auto;
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 16px;
@@ -52,3 +53,13 @@ form {
     border-radius: 35px;
     border: #c7641e 3px solid;
 }
+.message{
+    background: #fbf302;
+    border: #c7641e 3px solid;
+}
+.erreur{ background: red; padding: 5px; }
+.validation{ background: green; padding: 5px; }
+.message{
+background: #d9e8fd; padding: 15px;   margin: 10px auto;  border: 2px solid #c7641e; }
+.titre{ text-align: center;    }
+

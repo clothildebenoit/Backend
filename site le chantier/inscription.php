@@ -34,19 +34,19 @@ if($_POST)
  
 <form method="post" action="">
     <label for="pseudo">Pseudo</label><br>
-    <input type="text" id="pseudo" name="pseudo" maxlength="20" placeholder="votre pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" title="caractères acceptés : a-zA-Z0-9-_." required="required"><br><br>
+    <input type="text" class="form-control" id="pseudo" name="pseudo" maxlength="20" placeholder="votre pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" title="caractères acceptés : a-zA-Z0-9-_." required="required"><br><br>
           
     <label for="mdp">Mot de passe</label><br>
-    <input type="password" id="mdp" name="mdp" required="required"><br><br>
+    <input type="password" class="form-control" id="mdp" name="mdp" required="required"><br><br>
           
     <label for="nom">Nom</label><br>
-    <input type="text" id="nom" name="nom" placeholder="votre nom"><br><br>
+    <input type="text" class="form-control" id="nom" name="nom" placeholder="votre nom"><br><br>
           
     <label for="prenom">Prénom</label><br>
-    <input type="text" id="prenom" name="prenom" placeholder="votre prénom"><br><br>
+    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="votre prénom"><br><br>
   
     <label for="email">Email</label><br>
-    <input type="email" id="email" name="email" placeholder="exemple@gmail.com"><br><br>
+    <input type="email" class="form-control" id="email" name="email" placeholder="exemple@gmail.com"><br><br>
 
  
     <input type="submit" name="inscription" value="S'inscrire">
