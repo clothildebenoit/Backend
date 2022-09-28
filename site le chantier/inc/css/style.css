@@ -49,7 +49,7 @@ footer{ background: #fbf302; color: transparent;
 /* formulaires*/
 form {
     background: #fbf302; color: transparent; 
-    text-align: center; padding: 12px; margin: 20%;
+    text-align: center; padding: 12px; margin: 10%;
     border-radius: 35px;
     border: #c7641e 3px solid;
 }
@@ -59,7 +59,7 @@ form {
 }
 .erreur{ background: red; padding: 5px; }
 .validation{ background: green; padding: 5px; }
-.message{
-background: #d9e8fd; padding: 15px;   margin: 10px auto;  border: 2px solid #c7641e; }
+#message{
+background: #ffffff; padding: 15px;   margin: 10px auto;  border: 2px solid #c7641e; }
 .titre{ text-align: center;    }
 

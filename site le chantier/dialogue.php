@@ -1,7 +1,8 @@
-<?php
-// Partie connexion à la BDD et initialisation
-$mysqli = new Mysqli('localhost', 'root', '', 'dialogue');
-$contenu = '';
+<?php require_once(".\inc\init.inc.php");
+    require_once(".\inc\haut.inc.php"); 
+// // Partie connexion à la BDD et initialisation
+// $mysqli = new Mysqli('localhost', 'root', '', 'dialogue');
+// $contenu = '';
 
 // récupération des données pour enregistrement bdd
 if($_POST)
@@ -31,21 +32,18 @@ while($commentaire = $résultat->fetch_assoc())
 
 ?>
  
-<!Doctype html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="commentaire"><?php echo $contenu; ?></div>
-        <form class="form-control" method="post" action="">
+       
+        <!-- espace dialogue -->
+        <form class='message' method="post" action="">
             <label for="pseudo">Pseudo</label><br>
-            <input type="text" id="pseudo" name="pseudo" maxlength="20" pattern="[a-zA-Z0-9.-_]+" title="caractère autorisés : a-zA-Z0-9.-_"><br>
-             
+            <input type="text" id="pseudo" class="form-control" name="pseudo" maxlength="20" 
+            pattern="[a-zA-Z0-9.-_]+" title="caractère autorisés : a-zA-Z0-9.-_"><br>
             <label for="message">Message</label><br>
-            <textarea id="message" name="message" cols="50" rows="7"></textarea><br>
-             
+            <textarea id="message" name="message" class="form-control" cols="50" rows="7"></textarea><br>
             <input type="submit" value="Envoyer le message">
         </form>
-    </body>   
-</html>
+
+ <!-- Affichage des messages -->
+ <div class="commentaire"><?php echo $contenu; ?></div>
+
+        <?php require_once(".\inc\bas.inc.php"); ?>

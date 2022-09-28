@@ -32,29 +32,33 @@ if($_POST)
 <?php require_once(".\inc\haut.inc.php"); ?>
 <?php echo $contenu; ?>
  
+<!-- Formulaire d'inscription-->
+<div>
 <form method="post" action="">
-    <label for="pseudo">Pseudo</label><br>
-    <input type="text" class="form-control" id="pseudo" name="pseudo" maxlength="20" placeholder="votre pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" title="caractères acceptés : a-zA-Z0-9-_." required="required"><br><br>
+    <label for="pseudo">Pseudo<br>
+    <input type="text" class="form-control" id="pseudo" name="pseudo" 
+    maxlength="20" placeholder="pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" 
+    title="caractères acceptés : a-zA-Z0-9-_." ></label><br><br>
           
-    <label for="mdp">Mot de passe</label><br>
-    <input type="password" class="form-control" id="mdp" name="mdp" required="required"><br><br>
+    <label for="mdp">Mot de passe<br>
+    <input type="password" class="form-control" id="mdp" name="mdp" 
+    required="required" placeholder="mot de passe"></label><br><br>
           
-    <label for="nom">Nom</label><br>
-    <input type="text" class="form-control" id="nom" name="nom" placeholder="votre nom"><br><br>
+    <label for="nom">Nom<br>
+    <input type="text" class="form-control" id="nom" name="nom" placeholder="nom"></label><br><br>
           
-    <label for="prenom">Prénom</label><br>
-    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="votre prénom"><br><br>
+    <label for="prenom">Prénom<br>
+    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom"></label><br><br>
   
-    <label for="email">Email</label><br>
-    <input type="email" class="form-control" id="email" name="email" placeholder="exemple@gmail.com"><br><br>
+    <label for="email">Email<br>
+    <input type="email" class="form-control" id="email" name="email" placeholder="exemple@gmail.com"></label><br><br>
 
- 
     <input type="submit" name="inscription" value="S'inscrire">
 
     <label class="box-register">Déjà inscrit? 
     <a href=".\connexion.php">Connectez-vous ici</a>
     </label>
-
 </form>
+</div>
  
 <?php require_once(".\inc\bas.inc.php"); ?>
