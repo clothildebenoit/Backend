@@ -34,7 +34,7 @@ if($_POST)
  
 <!-- Formulaire d'inscription-->
 <div>
-<form method="post" action="">
+<form method="post" class="mx-auto" action="">
     <label for="pseudo">Pseudo<br>
     <input type="text" class="form-control" id="pseudo" name="pseudo" 
     maxlength="20" placeholder="pseudo" pattern="[a-zA-Z0-9-_.]{1,20}" 

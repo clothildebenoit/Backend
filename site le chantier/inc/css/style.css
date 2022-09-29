@@ -52,6 +52,12 @@ form {
     text-align: center; padding: 12px; margin: 10%;
     border-radius: 35px;
     border: #c7641e 3px solid;
+    max-width: 576px;
+    max-height: 576px;
+}
+.carrousel{
+    max-width: 576px;
+    max-height: 576px;
 }
 .message{
     background: #fbf302;

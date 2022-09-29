@@ -66,5 +66,5 @@ if($_POST)
      <input type="submit" value="Se connecter">
 </form>
 </div>
- 
+<img src=".\inc\img\chantier.jpeg" class="img-fluid rounded mx-auto d-block" alt="Le chantier">
 <?php require_once(".\inc\bas.inc.php"); ?>

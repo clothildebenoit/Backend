@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 27 sep. 2022 à 22:28
--- Version du serveur : 5.7.36
+-- Généré le : jeu. 29 sep. 2022 à 11:45
+-- Version du serveur :  5.7.36
 -- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -48,8 +49,18 @@ CREATE TABLE IF NOT EXISTS `commentaire` (
   `id_commentaire` int(3) NOT NULL AUTO_INCREMENT,
   `message` text NOT NULL,
   `date_enregistrement` datetime NOT NULL,
+  `pseudo` varchar(20) NOT NULL,
   PRIMARY KEY (`id_commentaire`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `commentaire`
+--
+
+INSERT INTO `commentaire` (`id_commentaire`, `message`, `date_enregistrement`, `pseudo`) VALUES
+(10, 'frgtfd\r\n', '2022-09-28 10:49:15', 'clo'),
+(11, 'frgtfd\r\n', '2022-09-28 13:07:13', 'clo'),
+(12, 'frgtfd\r\n', '2022-09-28 13:07:51', 'clo');
 
 -- --------------------------------------------------------
 
@@ -84,14 +95,14 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `statut` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_membre`),
   UNIQUE KEY `pseudo` (`pseudo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `membre`
 --
 
 INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `statut`) VALUES
-(1, 'clo', 'clo', 'Benoit', 'Clothilde', 'coty@gmx.fr', 0);
+(3, 'clo', '565a329d5654f1a6165f47f2d14e22939d41f5db138a74c74ca9ed0044aea113', 'Benoit', 'Clothilde', 'coty@gmx.fr', 0);
 
 -- --------------------------------------------------------
 

@@ -2,20 +2,19 @@
 
 //fichier initialisation et inclusion
 
-//.....connection BDD
+//connection BDD
 $mysqli = new mysqli("localhost", "root", "", "lechantier");
-if ($mysqli->connect_error) die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
+if ($mysqli->connect_error) die('Connexion à 
+la BDD échouée: ' . $mysqli->connect_error);
 
-// $mysqli->set_charset("utf8");
-
-//.......SESSION
+//SESSION
 session_start();
  
-//--------- ROUTE/CHEMIN absolu
+// gestion en CHEMIN absolu
 define("RACINE_SITE","site le chantier");
  
-//--------- VARIABLES
+//VARIABLES
 $contenu = '';
  
-//--------- AUTRES INCLUSIONS
+//AUTRES INCLUSIONS
 require_once("fonction.inc.php");
