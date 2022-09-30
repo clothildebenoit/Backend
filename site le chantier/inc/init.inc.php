@@ -17,4 +17,4 @@ define("RACINE_SITE","site le chantier");
 $contenu = '';
  
 //AUTRES INCLUSIONS
-require_once("fonction.inc.php");
+require_once("executeRequete.php");

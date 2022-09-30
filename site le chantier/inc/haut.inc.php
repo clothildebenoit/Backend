@@ -14,12 +14,7 @@
 
         <header>
             <div class="conteneur">
-                <!-- <div>
-                    <a href="\accueil.php" title="Mon Site">Site Le chantier 2.0</a>
-                </div> -->
-
-   
-              <nav class="navbar navbar-expand-lg bg-light">
+               <nav class="navbar navbar-expand-lg bg-light">
                 
                     <div class="container-fluid">
                       <a class="navbar-brand" href="\accueil.php">
@@ -49,16 +44,12 @@
                             </ul>
                           </li>
                         </ul>
-                        <formcontrol class="d-flex" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit">Chercher</button>
-                        </formcontrol>
                       </div>
                     </div>
                                       
-          </nav>
+                </nav>
                     
-</div>
+            </div>
         </header>
         <section>
             <div class="conteneur">

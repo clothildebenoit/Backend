@@ -1,14 +1,5 @@
 <?php require_once(".\inc\init.inc.php"); 
 
-if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
-{
-    session_destroy();
-}
-if(internauteEstConnecte())
-{
-    header("location:profil.php");
-}
-
 if($_POST)
 {
     // $contenu .=  "pseudo : " . $_POST['pseudo'] . "<br>mdp : " .  $_POST['mdp'] . "";
@@ -42,11 +33,32 @@ if($_POST)
 ?>
 
 <?php require_once(".\inc\haut.inc.php"); ?>
-<?php echo $contenu; ?>
- 
+
+
+<!-- Petite animation en JS
+ <div>
+ <img id="plot" src=".\inc\img\Cone_de_chantier.jpg">
+
+
+<script>
+  plot.mousedown = function() {
+    let start = Date.now();
+
+    let timer = setInterval(function() {
+      let timePassed = Date.now() - start;
+
+      plot.style.left = timePassed / 5 + 'px';
+
+      if (timePassed > 1000) clearInterval(timer);
+
+    }, 20);
+  }
+</script>
+ </div> -->
+
 <!-- Formulaire de connection -->
 <div>
-<form method="post" action="">
+<form method="post" class="mx-auto" action="">
     <label for="pseudo">Pseudo<br>
     <input type="text" id="pseudo" class="form-control" maxlength="20" name="pseudo" required></label><br> <br>
     <label for="mdp">Mot de passe<br>
@@ -66,5 +78,5 @@ if($_POST)
      <input type="submit" value="Se connecter">
 </form>
 </div>
-<img src=".\inc\img\chantier.jpeg" class="img-fluid rounded mx-auto d-block" alt="Le chantier">
+<img src=".\inc\img\chantier.jpg" class="img-fluid rounded mx-auto d-block" alt="Le chantier">
 <?php require_once(".\inc\bas.inc.php"); ?>

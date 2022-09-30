@@ -31,7 +31,7 @@ text-transform: none;
 header { background: #fbf302; padding: 5px; text-align: center; }
 header  span{ color: #fff; font-weight: bold; 
     text-transform: uppercase; margin-right: 5%; }
-header  nav{ display: inline; }
+header  nav{ display: inline;}
 header  a{ color: #ffffff; text-decoration: none; padding: 5px; }
 header  nav  a:hover{ background: #fbf302; }
 
@@ -64,8 +64,16 @@ form {
     border: #c7641e 3px solid;
 }
 .erreur{ background: red; padding: 5px; }
-.validation{ background: green; padding: 5px; }
+.validation{ background: rgb(88, 212, 88); padding: 5px; }
 #message{
 background: #ffffff; padding: 15px;   margin: 10px auto;  border: 2px solid #c7641e; }
-.titre{ text-align: center;    }
+.titre{ text-align: center;    
+}
+
+#plot {
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    cursor: pointer;
+  }
 
